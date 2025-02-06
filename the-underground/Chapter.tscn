@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=3 uid="uid://dsd71e16hfdhw"]
+
+[ext_resource type="Texture2D" uid="uid://ivc136wkmlnh" path="res://f45d41374dd6bfbd39514e44bf07b732.jpg" id="1_sdreo"]
+[ext_resource type="Texture2D" uid="uid://dua1f7rsa7obx" path="res://d55ac67d4a4e7c0e47d87cd31a330288.jpg" id="2_fwy40"]
+[ext_resource type="Texture2D" uid="uid://c2sqlu2nfc026" path="res://1108395f9df7d6f3e5722cc18c23c0ae (1).png" id="3_5swfi"]
+[ext_resource type="FontFile" uid="uid://dtdna3oqbt5my" path="res://Comic Sans MS Pixel.ttf" id="4_agypq"]
+[ext_resource type="Script" path="res://Chapter.gd" id="5_ahxos"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("5_ahxos")
+
+[node name="F45d41374Dd6Bfbd39514e44Bf07b732" type="Sprite2D" parent="."]
+position = Vector2(706, 390.75)
+scale = Vector2(1.91848, 1.31239)
+texture = ExtResource("1_sdreo")
+
+[node name="D55Ac67d4a4e7c0e47d87Cd31a330288" type="Sprite2D" parent="."]
+position = Vector2(269, 433.5)
+scale = Vector2(0.256, 0.534667)
+texture = ExtResource("2_fwy40")
+
+[node name="1108395f9Df7d6f3e5722Cc18c23c0Ae(1)" type="Sprite2D" parent="."]
+position = Vector2(268, 379.25)
+scale = Vector2(6.25, 6.44231)
+texture = ExtResource("3_5swfi")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 184.0
+offset_top = 553.0
+offset_right = 352.0
+offset_bottom = 612.0
+theme_override_fonts/font = ExtResource("4_agypq")
+theme_override_font_sizes/font_size = 26
+text = "Начать"
+flat = true
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 217.0
+offset_top = 504.0
+offset_right = 328.0
+offset_bottom = 588.0
+theme_override_fonts/font = ExtResource("4_agypq")
+theme_override_font_sizes/font_size = 33
+text = "Глава 1"
+
+[connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]

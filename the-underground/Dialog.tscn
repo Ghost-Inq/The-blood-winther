@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=3 uid="uid://jh5q56u4f02p"]
+
+[ext_resource type="Texture2D" uid="uid://c2sqlu2nfc026" path="res://1108395f9df7d6f3e5722cc18c23c0ae (1).png" id="1_0vlxy"]
+[ext_resource type="Script" path="res://Dialog.gd" id="1_4bf7p"]
+[ext_resource type="FontFile" uid="uid://dtdna3oqbt5my" path="res://Comic Sans MS Pixel.ttf" id="2_sfh3n"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_y08sj"]
+line_spacing = 34.0
+font_size = 46
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_4bf7p")
+
+[node name="1108395f9Df7d6f3e5722Cc18c23c0Ae(1)" type="Sprite2D" parent="."]
+position = Vector2(470, 339)
+scale = Vector2(7.28571, 7.46154)
+texture = ExtResource("1_0vlxy")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 617.0
+offset_top = 351.0
+offset_right = 1090.0
+offset_bottom = 549.0
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_sfh3n")
+theme_override_font_sizes/font_size = 25
+text = "Черт..."
+label_settings = SubResource("LabelSettings_y08sj")
+
+[node name="Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 728.0
+offset_top = 347.0
+offset_right = 752.0
+offset_bottom = 409.0
+theme_override_fonts/font = ExtResource("2_sfh3n")
+theme_override_font_sizes/font_size = 50
+text = ">"
+flat = true
+
+[connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]

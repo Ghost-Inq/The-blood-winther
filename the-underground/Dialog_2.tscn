@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=3 uid="uid://bpo5cltr8kwq1"]
+
+[ext_resource type="PackedScene" uid="uid://jh5q56u4f02p" path="res://Dialog.tscn" id="1_barwq"]
+[ext_resource type="FontFile" uid="uid://dtdna3oqbt5my" path="res://Comic Sans MS Pixel.ttf" id="2_25qgf"]
+[ext_resource type="Script" path="res://Dialog_2.gd" id="3_3ahej"]
+
+[sub_resource type="GDScript" id="GDScript_tetxw"]
+script/source = "extends Button
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta: float) -> void:
+	pass
+"
+
+[node name="Node2D" instance=ExtResource("1_barwq")]
+
+[node name="Label" parent="Control" index="0"]
+text = "Надо выбераться..."
+
+[node name="Button" parent="Control" index="1"]
+visible = false
+offset_left = 1575.0
+offset_top = 156.0
+offset_right = 1599.0
+offset_bottom = 218.0
+script = SubResource("GDScript_tetxw")
+
+[node name="Button2" type="Button" parent="Control" index="2"]
+layout_mode = 0
+offset_left = 952.0
+offset_top = 338.0
+offset_right = 989.0
+offset_bottom = 415.0
+theme_override_fonts/font = ExtResource("2_25qgf")
+theme_override_font_sizes/font_size = 50
+text = ">"
+flat = true
+script = ExtResource("3_3ahej")
+
+[connection signal="pressed" from="Control/Button2" to="Control/Button2" method="_on_pressed"]

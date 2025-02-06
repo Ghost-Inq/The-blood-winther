@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://javhrtmaqa6u"]
+
+[ext_resource type="Texture2D" uid="uid://d1ulvv0lapatq" path="res://2024-12-07_11-13-01-no-bg-preview (carve.photos).png" id="1_210jr"]
+[ext_resource type="FontFile" uid="uid://dtdna3oqbt5my" path="res://Comic Sans MS Pixel.ttf" id="1_ucdfv"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 79.0
+offset_top = 91.0
+offset_right = 584.0
+offset_bottom = 420.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.150075, 0.150075, 0.150075, 1)
+theme_override_colors/font_outline_color = Color(0.0701524, 0.0701524, 0.0701524, 1)
+theme_override_fonts/font = ExtResource("1_ucdfv")
+theme_override_font_sizes/font_size = 22
+text = "Цель собрать доказательства : 0"
+
+[node name="2024-12-0711-13-01-no-bg-preview(carve_photos)" type="Sprite2D" parent="."]
+position = Vector2(408, 103)
+scale = Vector2(0.903226, 0.886364)
+texture = ExtResource("1_210jr")

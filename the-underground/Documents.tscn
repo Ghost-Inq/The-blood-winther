@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://dm6wfsqg83242"]
+
+[ext_resource type="Script" path="res://Documents.gd" id="1_mxs2q"]
+[ext_resource type="Texture2D" uid="uid://d1ulvv0lapatq" path="res://2024-12-07_11-13-01-no-bg-preview (carve.photos).png" id="1_pirdt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cmbc3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w3ov5"]
+size = Vector2(4.25, 10)
+
+[node name="Documents" type="Area2D"]
+script = ExtResource("1_mxs2q")
+
+[node name="2024-12-0711-13-01-no-bg-preview(carve_photos)" type="Sprite2D" parent="."]
+position = Vector2(-26.5, -7.5)
+scale = Vector2(0.435484, 0.477273)
+texture = ExtResource("1_pirdt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-29, -7)
+shape = SubResource("RectangleShape2D_cmbc3")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(-17.125, -7)
+shape = SubResource("RectangleShape2D_w3ov5")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

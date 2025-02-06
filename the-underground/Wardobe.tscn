@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1gympvmviu7j"]
+
+[ext_resource type="Texture2D" uid="uid://blajqq60mn1ad" path="res://f9c66adff43af91197c8461502658998.jpg" id="1_iew45"]
+[ext_resource type="Script" path="res://Wardobe.gd" id="1_qblqc"]
+[ext_resource type="FontFile" uid="uid://dtdna3oqbt5my" path="res://Comic Sans MS Pixel.ttf" id="3_u86cx"]
+
+[node name="Wardobe" type="Node2D"]
+script = ExtResource("1_qblqc")
+
+[node name="F9c66Adff43Af91197c8461502658998" type="Sprite2D" parent="."]
+position = Vector2(705, 415.5)
+scale = Vector2(1.71776, 1.60577)
+texture = ExtResource("1_iew45")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 300.0
+offset_top = 380.0
+offset_right = 564.0
+offset_bottom = 495.0
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_u86cx")
+theme_override_font_sizes/font_size = 29
+text = "Продолжить"
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 195.0
+offset_top = 211.0
+offset_right = 613.0
+offset_bottom = 398.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.0142752, 0.0142752, 0.0142752, 1)
+theme_override_colors/font_outline_color = Color(0.0209478, 0.0258745, 0.019564, 1)
+theme_override_fonts/font = ExtResource("3_u86cx")
+theme_override_font_sizes/font_size = 38
+text = "Глава 1 : Дом"
+
+[connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
